@@ -91,17 +91,21 @@
         </tr>
     </table>
     <h4><span class="gold">&amp;&amp;</span> возвращает <b>false</b> или самый <b>правый операнд</b></h4>
-    <pre><code>let zero = 1 &amp;&amp; 2 &amp;&amp; 0 &amp;&amp; 4 &amp;&amp; 5<span class="comment"> // 0</span></code></pre>
+    <pre><code>let zero = 1 &amp;&amp; 2 &amp;&amp; 0 &amp;&amp; 4 &amp;&amp; 5;<span class="comment"> // 0</span></code></pre>
     <pre><code>let right = 5 &amp;&amp; 4 &amp;&amp; 3 &amp;&amp; 2 &amp;&amp; 1; <span class="comment">// 1</span></code></pre>
     <h4><span class="gold">||</span> возвращает <b>true</b> или самый <b>левый <span class="gold">true</span> операнд</b></h4>
-    <pre><code>let left =  1 || 2 || 3 || 4 || 5 || 0; <span class="comment"> // 1</span> </code></pre>
-    <pre><code>left =  0 || 0 || 0|| 0 || 5 || 0 ;<span class="comment">// 5</span></code></pre>
-    <pre><code>zero =  0 || 0 || 0|| 0 || 0 || 0 ;<span class="comment">// 0</span></code></pre>
+    <pre><code>let left =  1 || 2 || 3 || 4 || 5 || null; <span class="comment"> // 1</span> </code></pre>
+    <pre><code>left =  0 || 0 || 0|| 0 || 5 || null;<span class="comment">// 5</span></code></pre>
+    <pre><code>zero =  0 || 0 || 0|| 0 || 0 || null;<span class="comment">// null</span></code></pre>
     <h2>побитовые операторы</h2>
     <p>приводят к 32-битному числу <span class="comment"> с потерей информации</span> что не рекомендут эти операции к использованию</p>
     <h4><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Bitwise operators</a></h4>
     <h4>побитовое <span class="gold">~</span> NOT</h4>
-    <pre><code>~01 100 // </code></pre>
+    <pre><code>~-2 <span class="comment">// 1</span> </code></pre>
+    <pre><code>~-1  <span class="comment">// 0</span> </code></pre>
+    <pre><code>~0  <span class="comment">// -1</span> </code></pre>
+    <pre><code>~1  <span class="comment">// -2</span> </code></pre>
+    <pre><code>~2  <span class="comment">// -3</span> </code></pre>
     <h4>побитовое <span class="gold">|</span> OR</h4>
     <pre><code>01 100  
 11 000 
