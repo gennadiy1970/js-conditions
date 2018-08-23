@@ -193,6 +193,18 @@ let uncript = cript ^ key;
 cript.toString(2)
     
 </code></pre>
+    <h4>XOR для обмена значениями</h4>
+    <pre><code>
+let first = 100;
+let second = 200;
+
+first  = first ^ second; 
+second = first ^ second; 
+first  = first ^ second; 
+<span class="comment">first is 200 </span>
+<span class="comment">second is 100 </span>
+
+    </code></pre>
         </section>
     </div>
     <a class="back" href="../index.html">back</a>
