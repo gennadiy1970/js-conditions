@@ -5,76 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>heads or tails</title>
+    <title>SWITCH</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <pre><kbd class="kbd-wrp">
-let res1 = 0, res2 = 0, res3 = 0, res4 = 0, res5 = 0, res6 = 0;
-let toss = Math.floor(Math.random() * 6 + 1);
-                    
-switch (toss) {
-    case 1: 
-        res1 += 1;
-        break;
-    case 2: 
-        res2 += 1;
-        break;
-    case 3: 
-        res3 += 1;
-        break;
-    case 4: 
-        res4 += 1;
-        break;
-    case 5: 
-        res5 += 1;
-        break;
-    case 6: 
-        res6 += 1;
-        break;  
-    default:
-     console.log('Error: toss out a range')          
-}            
-</kbd></pre>
-        <div class="box">
-            <h1>Game Dices</h1>
-            <div class="results">
-                   <!-- <div class="res">one: <span class="one">0</span></div>
-                   <div class="res">two: <span class="two">0</span></div> -->
-                   <table>
-                       <tr>
-                           <th>1</th>
-                           <th>2</th>
-                           <th>3</th>
-                           <th>4</th>
-                           <th>5</th>
-                           <th>6</th>
-                       </tr>
-                       <tr>
-                           <td>0</td>
-                           <td>0</td>
-                           <td>0</td>
-                           <td>0</td>
-                           <td>0</td>
-                           <td>0</td>
-                       </tr>
-                   </table>
-            </div>
-            <div class="btn-wrp">
-                <button>toss</button>
-            </div>
-            <div class="img-wrp">
-                <img class="toss" src="./img/toss.jpg" alt=""  height="280">
-            </div>
-            <div class="img-wrp">
-                <img class="dices" src="" alt=""  height="160">
-            </div>
-        </div>
+        <section>
+            <h2>SWITCH</h2>
+            <h4>switch, case, break, default</h4>
+            <p><b>switch</b> в круглых скобках содержит переменную любого типа для последующего сравнения с условиями внутри блока кода</p>
+            <p><b>case</b> находятся внутри блока кода. </p>
+                <ul>
+                    <li>блок определяется фигурными скобками</li>
+                    <li><i>case</i> не ограничены в количестве</li>
+                    <li>содержат <i>значение</i> для сравнения <b>перед двоеточием</b></li>
+                    <li>значение <i>case</i> строго <b>===</b> сравнивается c переменной из <i>switch</i></li>
+                    <li>после первого совпадения сравнение прекращается</li>
+                    <li>код выполняется <b>после двоеточия</b> сразу за первым совпадением</li>
+                    <li>затем выполнение кода продолжается для всех <i>case</i> вниз по потоку выполнения</li>
+                    <li>прервать выполнение по потоку можно с помощью оператора выхода из блока <b>break</b> </li>
+                    <li>если все условия <i>case</i> вернули <i>false</i>, то 
+                        выполнится код из блока после служебного слова <b>default</b> и затем код за блоком</li>
+                    <li>если <b>default</b> не задан, то выполнится код за блоком</li>
+                </ul>
+          <h4>Рекомендуется всегда использовать default</h4>
+        </section>
+        <section>
+            <h4>Синтаксис блоков case</h4>
+            
+            <pre><code>
+let value = 2;
+let result;     
+
+switch  (value) {
+    case 1: result = 10;
+    case 2: result = 20;
+    case 3: result = 30;
+}
+<span class="comment">30</span>
+
+                </code></pre>
+            
+            <pre><code>
+let value = 2;
+let result;     
+
+switch  (value) {
+    case 1: result = 10; break;
+    case 2: result = 20; break;
+    case 3: result = 30; break;
+}
+<span class="comment">20</span>
+
+                </code></pre>
+            
+            <pre><code>
+let value = 5;
+let result;     
+
+switch  (value) {
+    case 1: result = 10; break;
+    case 2: result = 20; break;
+    case 3: result = 30; break;
+}
+<span class="comment">undefined</span>
+
+                </code></pre>
+            
+            <pre><code>
+let value = 5;
+let result;     
+
+switch  (value) {
+    case 1: result = 10; break;
+    case 2: result = 20; break;
+    case 3: result = 30; break;
+    default: result = 100;
+}
+<span class="comment">100</span>
+
+                </code></pre>
+        </section>
+        <section>
+            <h4>Синтаксис блоков if else if</h4>
+            <p>Условие задается служебными словами <b>if</b> и <b>else if</b> в выражении в круглых скобках, которое должно вернуть <i>boolean</i>
+                либо литерал, который будет приведен к <i>boolean</i></p>
+            <p>Блоки определяются фигурными скобками</p>
+            <p>Если условие <i>true</i>, то выполнится блок после <b>if</b> </p>
+            <p>Если условие <i>false</i>, то пройдет проверка на <b>else if</b>. 
+                Блок выполнится блок после служебног слова <b>else if</b> 
+            в случае <i>true</i> и не выполнится в случае <i>false</i></p>
+            <pre><code>
+if (false) {
+    console.log(`
+      <span class="text">код в блоке 
+        не выполнится при false</span>
+    `);
+} else if (true) {
+    console.log(`
+      <span class="text">код в блоке 
+        выполнится при 
+        false if 
+        true else if</span>
+    `);
+}
+    
+console.log(`
+<span class="text">код после блока 
+    выполнится в любом случае</span>
+`);
+            </code></pre>
+    </section>
     </div>
     <a class="back" href="../index.html">back</a>
-    <script src="./js/app.js"></script>
 </body>
 
 </html>

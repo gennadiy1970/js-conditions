@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXAMPLE SWITCH</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+        <pre><code>
+let res1 = 0, 
+    res2 = 0, 
+    res3 = 0, 
+    res4 = 0, 
+    res5 = 0, 
+    res6 = 0;
+
+let toss = Math.floor(Math.random() * 6 + 1);
+                    
+switch (toss) {
+    case 1: 
+        res1 += 1;
+        break;
+    case 2: 
+        res2 += 1;
+        break;
+    case 3: 
+        res3 += 1;
+        break;
+    case 4: 
+        res4 += 1;
+        break;
+    case 5: 
+        res5 += 1;
+        break;
+    case 6: 
+        res6 += 1;
+        break;  
+    default:
+     console.log('Error: toss out a range')          
+}            
+</code></pre>
+</section>
+<section>
+        <div class="box">
+            <h1>Game Dices</h1>
+            <div class="flex-row">
+            <div class="results">
+                   <!-- <div class="res">one: <span class="one">0</span></div>
+                   <div class="res">two: <span class="two">0</span></div> -->
+                   <table>
+                       <tr>
+                           <th>1</th>
+                           <th>2</th>
+                           <th>3</th>
+                           <th>4</th>
+                           <th>5</th>
+                           <th>6</th>
+                       </tr>
+                       <tr>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                           <td>0</td>
+                       </tr>
+                   </table>
+            </div>
+            <div class="btn-wrp">
+                <button>toss</button>
+            </div>
+        </div>
+            <div class="img-wrp">
+                <img class="toss" src="./img/toss.jpg" alt=""  height="280">
+            </div>
+            <div class="img-wrp">
+                <img class="dices" src="./img/1.jpg" alt=""  height="160">
+            </div>
+        </div>
+    </section>
+    </div>
+    <a class="back" href="../index.html">back</a>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

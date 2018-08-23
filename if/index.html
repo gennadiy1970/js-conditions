@@ -5,35 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>heads or tails</title>
+    <title>IF</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <pre><kbd class="kbd-wrp"> 
-let isHeads = Math.random() &gt;= 0.5;
-let heads = 0, tails = 0;
+        <section>
+            <h2>IF</h2>
+            <p>Выражение <b>if выполняет блок кода, если условие <b>true</b></b></p>
+            <p>Если условие <b>false</b>, то выполнится код, следующий сразу за блоком.</p>
+            <h4>Синтаксис блока if</h4>
+            <p>Условие задается служебным словом if и выражением в круглых скобках, которое должно вернуть <b>boolean</b>
+                либо литерал, который будет приведен к <b>boolean</b></p>
+            <p>Блок определяется фигурными скобками</p>
+            <pre><code>
+if (true) {
+    console.log(`
+      <span class="text">код в блоке 
+      выполнится</span>
+`);
+}
 
-if (isHeads) {
-    heads += 1;
+if (true) {
+    console.log(`
+    <span class="text">код в блоке 
+    не выполнится</span>
+`);
+}
+
+console.log(`
+    <span class="text">код после блока 
+    выполнится в любом случае</span>
+`);
+            </code></pre>
+        </section>
+        <section>
+            <h4>Синтаксис блоков if else</h4>
+            <p>Условие задается служебным словом if и выражением в круглых скобках, которое должно вернуть <b>boolean</b>
+                либо литерал, который будет приведен к <b>boolean</b></p>
+            <p>Блоки определяются фигурными скобками</p>
+            <p>Если условие <b>true</b>, то выполнится блок после <b>if</b> </p>
+            <p>Если условие <b>false</b>, то выполнится блок после служебного слова <b>else</b> </p>
+            <pre><code>
+if (true) {
+    console.log(`
+      <span class="text">код в блоке 
+        выполнится при true</span>
+    `);
 } else {
-    tails += 1;
-}       </kbd></pre>
-        <div class="box">
-            <h1>heads or tails</h1>
-            <div class="results">
-                   <div class="res">heads: <span class="heads">0</span></div>
-                   <div class="res">tails: <span class="tail">0</span></div>
-            </div>
-            <div>
-                <button>coin toss</button>
-            </div>
-            <img src="" alt="" width="280" height="280">
-        </div>
+    console.log(`
+      <span class="text">код в блоке 
+      выполнится при false</span>
+    `);
+}
+    
+    console.log(`
+    <span class="text">код после блока 
+    выполнится в любом случае</span>
+    `);
+                </code></pre>
+        </section>
+        <section>
+            <h4>Синтаксис блоков if else if</h4>
+            <p>Условие задается служебными словами <b>if</b> и <b>else if</b> в выражении в круглых скобках, которое должно вернуть <i>boolean</i>
+                либо литерал, который будет приведен к <i>boolean</i></p>
+            <p>Блоки определяются фигурными скобками</p>
+            <p>Если условие <i>true</i>, то выполнится блок после <b>if</b> </p>
+            <p>Если условие <i>false</i>, то пройдет проверка на <b>else if</b>. 
+                Блок выполнится блок после служебного слова <b>else if</b> 
+            в случае <i>true</i> и не выполнится в случае <i>false</i></p>
+            <pre><code>
+if (false) {
+    console.log(`
+      <span class="text">код в блоке 
+        не выполнится при false</span>
+    `);
+} else if (true) {
+    console.log(`
+      <span class="text">код в блоке 
+        выполнится при 
+        false if 
+        true else if</span>
+    `);
+}
+    
+console.log(`
+<span class="text">код после блока 
+    выполнится в любом случае</span>
+`);
+            </code></pre>
+    </section>
     </div>
     <a class="back" href="../index.html">back</a>
-    <script src="./js/app.js"></script>
 </body>
 
 </html>

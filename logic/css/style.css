@@ -1,8 +1,9 @@
 body {
-    background: navy;
+    /* background: navy; */
     font-family: sans-serif;
     font-size: 24px;
-    color: #fff;
+    /* color: #fff; */
+    color: #1e1e1e;
 }
 
 .wrapper {

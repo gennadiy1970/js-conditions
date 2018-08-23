@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXAMPLE IF</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+            <pre><kbd class="kbd-wrp"> 
+let isHeads = Math.random() &gt;= 0.5;
+let heads = 0, tails = 0;
+
+if (isHeads) {
+    heads += 1;
+} else {
+    tails += 1;
+}       </kbd></pre>
+        </section>
+        <section>
+            <div class="box">
+                <h1 style="text-align: center;">heads or tails</h1>
+                <div class="flex-row">
+                        <div class="res">heads: <span class="heads">0</span></div>
+                        <div class="res">tails: <span class="tail">0</span></div>
+                        <button class="btn-if">coin toss</button>
+                </div>
+                <div class="img-wrp" style="text-align: center;">
+                    <img src="./img/head.jpg" alt="" width="280" height="280">
+                </div>
+            </div>
+        </section>
+    </div>
+    <a class="back" href="../index.html">back</a>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
